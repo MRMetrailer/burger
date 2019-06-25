@@ -1,0 +1,22 @@
+.header-bg {
+    background-color:#f67f72;
+    color:white;
+}
+.header {
+    color:#f67f72;
+}
+ul {
+    list-style-type: none;    
+}
+img {
+    max-height:200px;
+}
+.btn-mustard {
+    background-color:#fac126;
+    color:white;
+}
+
+.btn-ketchup {
+    background-color:#f67f72;
+    color:white;
+}
