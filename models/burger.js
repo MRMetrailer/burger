@@ -1,25 +1,17 @@
-var orm = require("../config/orm.js");
+var orm = require('../config/orm.js');
 
 var burger = {
-	// selectAll for getting all the burgers
-	selectAll: function(cb) {
-		orm.selectAll('burgers', function(res) {
-			cb(res);
-		});
-	},
-	// insertOne for adding a new burger
-	insertOne: function(cols, vals, cb) {
-		orm.insertOne('burgers', cols, vals, function(res) {
-			cb(res);
-		});
-	},
-	// updateOne for changing the burger status
-	updateOne: function(objColVals, condition, cb) {
-		orm.updateOne('burgers', objColVals, condition, function(res) {
-			cb(res);
-		});
-	}
-};
+    all: function(cb) {
+        orm.all('burgers',function(res) {
+            cb(res);
+        })
+    },
+    update: function(id,cb) {
+        orm.update('burgers',id,cb);
+    },
+    create: function(name,cb) {
+        orm.create('burgers', name, cb);
+    }
+}
 
-// export burger back to the controller
 module.exports = burger;
